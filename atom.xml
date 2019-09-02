@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dt0814.github.io/"/>
-  <updated>2019-09-02T03:18:50.087Z</updated>
+  <updated>2019-09-02T09:12:47.430Z</updated>
   <id>https://dt0814.github.io/</id>
   
   <author>
@@ -17,11 +17,45 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>hexo中next主题配置</title>
+    <link href="https://dt0814.github.io/2019/09/02/hexoNext%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/"/>
+    <id>https://dt0814.github.io/2019/09/02/hexoNext主题配置/</id>
+    <published>2019-09-02T08:01:00.000Z</published>
+    <updated>2019-09-02T09:12:47.430Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;本文使用的是hexo中的next主题，读者可以根据自己的喜好去选择其他主题&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;分享一个知乎主题推荐
+        
+      
+    
+    </summary>
+    
+      <category term="搭建博客 - 搭建博客" scheme="https://dt0814.github.io/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="搭建博客" scheme="https://dt0814.github.io/tags/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="备忘" scheme="https://dt0814.github.io/tags/%E5%A4%87%E5%BF%98/"/>
+    
+      <category term="next" scheme="https://dt0814.github.io/tags/next/"/>
+    
+      <category term="hexo" scheme="https://dt0814.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>hexo 静态博客搭建</title>
     <link href="https://dt0814.github.io/2019/09/02/hexo%E6%90%AD%E5%BB%BA/"/>
     <id>https://dt0814.github.io/2019/09/02/hexo搭建/</id>
     <published>2019-09-02T03:07:00.000Z</published>
-    <updated>2019-09-02T03:18:50.087Z</updated>
+    <updated>2019-09-02T07:02:28.532Z</updated>
     
     <summary type="html">
     
@@ -44,6 +78,8 @@
       <category term="搭建博客" scheme="https://dt0814.github.io/tags/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
     
       <category term="备忘" scheme="https://dt0814.github.io/tags/%E5%A4%87%E5%BF%98/"/>
+    
+      <category term="hexo" scheme="https://dt0814.github.io/tags/hexo/"/>
     
   </entry>
   
