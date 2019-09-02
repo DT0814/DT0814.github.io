@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>hexo 静态博客搭建</title>
+      <link href="/2019/09/02/hexo%E6%90%AD%E5%BB%BA/"/>
+      <url>/2019/09/02/hexo%E6%90%AD%E5%BB%BA/</url>
+      
+        <content type="html"><![CDATA[<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><ol><li>准备node环境<blockquote><p>直接去官网下载安装就可以了 <a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a></p></blockquote></li></ol><p>安装完成后运行</p><blockquote><p>npm -v 查看是否安装正确</p></blockquote><ol start="2"><li>准备git环境<blockquote><p><a href="https://www.liaoxuefeng.com/wiki/896043488029600/896067074338496" target="_blank" rel="noopener">https://www.liaoxuefeng.com/wiki/896043488029600/896067074338496</a></p></blockquote></li></ol><p>进入廖雪峰的网站有不同操作系统的git环境安装方法。</p><h2 id="安装hexo插件"><a href="#安装hexo插件" class="headerlink" title="安装hexo插件"></a>安装hexo插件</h2><p>在终端输入以下命令并按下回车键</p><blockquote><p>npm install -g hexo-cli</p></blockquote><h2 id="构建博客系统"><a href="#构建博客系统" class="headerlink" title="构建博客系统"></a>构建博客系统</h2><blockquote><p>hexo init <folder><br>会出现 <folder> 命名的文件夹</folder></folder></p></blockquote><blockquote><p>cd <folder> 进入文件夹</folder></p></blockquote><blockquote><p>npm install 执行本条命令</p></blockquote><p>最后的项目文件夹结构如下图所示</p><p><img src="/images/struct.jpg" alt="项目文件结构图" title="项目结构图"></p><p>最后在 floder文件夹内执行</p><blockquote><p>hexo s</p></blockquote><p>在浏览器地址栏输入</p><blockquote><p><a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> </p></blockquote><p>不出意外的情况下就会进入如下图所示的网站<br><img src="/images/shouyetest.jpg" alt="项目文件结构图" title="项目结构图"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 搭建博客 - 搭建博客 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 搭建博客 </tag>
+            
+            <tag> 备忘 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2019/08/28/hello-world/"/>
       <url>/2019/08/28/hello-world/</url>
