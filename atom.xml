@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dt0814.github.io/"/>
-  <updated>2019-09-02T09:47:15.935Z</updated>
+  <updated>2019-09-05T08:08:11.287Z</updated>
   <id>https://dt0814.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>React组件通信</title>
+    <link href="https://dt0814.github.io/2019/09/05/react%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/"/>
+    <id>https://dt0814.github.io/2019/09/05/react组件通信/</id>
+    <published>2019-09-05T07:02:00.000Z</published>
+    <updated>2019-09-05T08:08:11.287Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;最近在学习react过程中，接触到父子组件通信问题，写下文档加深印象。&lt;/p&gt;
+&lt;h2 id=&quot;子组件调用父组件&quot;&gt;&lt;a href=&quot;#子组件调用父组件&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="前端 - React" scheme="https://dt0814.github.io/categories/%E5%89%8D%E7%AB%AF-React/"/>
+    
+    
+      <category term="备忘" scheme="https://dt0814.github.io/tags/%E5%A4%87%E5%BF%98/"/>
+    
+      <category term="React" scheme="https://dt0814.github.io/tags/React/"/>
+    
+  </entry>
   
   <entry>
     <title>阿里云购买域名映射到github.io</title>
