@@ -4,6 +4,39 @@
   
     
     <entry>
+      <title>CSS 布局</title>
+      <link href="/2019/09/14/css%E5%B8%83%E5%B1%80/"/>
+      <url>/2019/09/14/css%E5%B8%83%E5%B1%80/</url>
+      
+        <content type="html"><![CDATA[<h2 id="display-与-Visibility"><a href="#display-与-Visibility" class="headerlink" title="display 与 Visibility"></a>display 与 Visibility</h2><pre><code>隐藏一个元素可以通过把display属性设置为&quot;none&quot;，或把visibility属性设置为&quot;hidden&quot;。    但是请注意，这两种方法会产生不同的结果。  visibility:hidden可以隐藏某个元素，但隐藏的元素仍需占用与未隐藏之前一样的空间。    从名字可以看出Visibility是是否可见，display是隐藏。</code></pre><h3 id="display其他属性"><a href="#display其他属性" class="headerlink" title="display其他属性"></a>display其他属性</h3><table><thead><tr><th align="center">值</th><th>描述</th></tr></thead><tbody><tr><td align="center">none</td><td>此元素不会被显示。</td></tr><tr><td align="center">block</td><td>此元素将显示为块级元素，此元素前后会带有换行符。</td></tr><tr><td align="center">inline</td><td>默认。此元素会被显示为内联元素，元素前后没有换行符。</td></tr><tr><td align="center">inline-block</td><td>行内块元素。（CSS2.1 新增的值）</td></tr><tr><td align="center">list-item</td><td>此元素会作为列表显示。</td></tr></tbody></table><h2 id="Position"><a href="#Position" class="headerlink" title="Position"></a>Position</h2><h3 id="static"><a href="#static" class="headerlink" title="static"></a>static</h3><pre><code>HTML 元素的默认值，即没有定位，遵循正常的文档流对象。静态定位的元素不会受到 top, bottom, left, right影响。</code></pre><h2 id="fixed"><a href="#fixed" class="headerlink" title="fixed"></a>fixed</h2><pre><code>元素的位置相对于浏览器窗口是固定位置。即使窗口是滚动的它也不会移动：top：距离顶部left：距离左边right：距离邮编bottom：距离底部</code></pre><h2 id="relative"><a href="#relative" class="headerlink" title="relative"></a>relative</h2><pre><code>relative 定位相对定位元素的定位是相对其正常位置。原来占有的空间不改变。定位属性和fixed相同；</code></pre><h2 id="absolute"><a href="#absolute" class="headerlink" title="absolute"></a>absolute</h2><pre><code>绝对定位的元素的位置相对于最近的已定位父元素，如果元素没有已定位的父元素，那么它的位置相对于&lt;html&gt;:定位属性同上；不同于fixed在于fixed相对于窗口，absolute相对于父元素。</code></pre><h2 id="sticky"><a href="#sticky" class="headerlink" title="sticky"></a>sticky</h2><pre><code>粘性定位的元素是依赖于用户的滚动，在 position:relative 与 position:fixed定位之间切换。  它的行为就像position:relative;而当页面滚动超出目标区域时，它的表现就像position:fixed;  它会固定在目标位置。元素定位表现为在跨越特定阈值前为相对定位，之后为固定定位。  这个特定阈值指的是 top, right, bottom 或 left 之一，换言之，指定top,right,bottom或left四个阈值其中之一，才可使粘性定位生效。否则其行为与相对定位相同。</code></pre><h2 id="flex"><a href="#flex" class="headerlink" title="flex"></a>flex</h2><pre><code>Flex 是 Flexible Box的缩写，意为&quot;弹性布局&quot;，用来为盒状模型提供最大的灵活性，任何元素都可以使用。![flex布局](/images/flex.png &quot;flex布局&quot;)容器默认存在两根轴：  水平的主轴（main axis）和垂直的交叉轴（cross axis）。  主轴的开始位置（与边框的交叉点）叫做main start，结束位置叫做main end；  交叉轴的开始位置叫做cross start，结束位置叫做cross end。  项目默认沿主轴排列。单个项目占据的主轴空间叫做main size，占据的交叉轴空间叫做cross size。</code></pre><h3 id="flex属性"><a href="#flex属性" class="headerlink" title="flex属性"></a>flex属性</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">flex-direction </span><br><span class="line">    //决定主轴的排列方向</span><br><span class="line">    row（默认值）：主轴为水平方向，起点在左端。</span><br><span class="line">    row-reverse：主轴为水平方向，起点在右端。</span><br><span class="line">    column：主轴为垂直方向，起点在上沿。</span><br><span class="line">    column-reverse：主轴为垂直方向，起点在下沿。</span><br><span class="line">    </span><br><span class="line">flex-wrap </span><br><span class="line">    //默认情况下，项目都排在一条线（又称&quot;轴线&quot;）上。flex-wrap属性定义，如果一条轴线排不下，如何换行。</span><br><span class="line">    nowrap：默认值不换行</span><br><span class="line">    wrap：第一行在最上方，依次向下2，3...</span><br><span class="line">    wrap-reverse：第一行在最下方，以此向上为2，3...行</span><br><span class="line">    </span><br><span class="line">flex-flow</span><br><span class="line">    //flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。顺序是先flex-direction后flex-wrap</span><br><span class="line"></span><br><span class="line">justify-content</span><br><span class="line">    //justify-content属性定义了项目在主轴上的对齐方式</span><br><span class="line">    flex-start（默认值）：左对齐</span><br><span class="line">    flex-end：右对齐</span><br><span class="line">    center： 居中</span><br><span class="line">    space-between：两端对齐，项目之间的间隔都相等。</span><br><span class="line">    space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。</span><br><span class="line"></span><br><span class="line">align-items</span><br><span class="line">    //align-items属性定义项目在交叉轴上如何对齐。</span><br><span class="line">    flex-start：交叉轴的起点对齐。</span><br><span class="line">    flex-end：交叉轴的终点对齐。</span><br><span class="line">    center：交叉轴的中点对齐。</span><br><span class="line">    baseline: 项目的第一行文字的基线对齐。</span><br><span class="line">    stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。</span><br><span class="line">    </span><br><span class="line">align-content</span><br><span class="line">    //align-content属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。</span><br><span class="line">    flex-start：与交叉轴的起点对齐。</span><br><span class="line">    flex-end：与交叉轴的终点对齐。</span><br><span class="line">    center：与交叉轴的中点对齐。</span><br><span class="line">    space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。</span><br><span class="line">    space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。</span><br><span class="line">    stretch（默认值）：轴线占满整个交叉轴。</span><br></pre></td></tr></table></figure><h3 id="flex-item属性"><a href="#flex-item属性" class="headerlink" title="flex item属性"></a>flex item属性</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">order </span><br><span class="line">    //order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。相同按照定义顺序排序</span><br><span class="line">flex-grow</span><br><span class="line">    //flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。  </span><br><span class="line">    //如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。</span><br><span class="line">flex-shrink</span><br><span class="line">    //flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。</span><br><span class="line">    //如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。</span><br><span class="line">flex-basis</span><br><span class="line">    //flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。</span><br><span class="line">    //浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。</span><br><span class="line">    //它可以设为跟width或height属性一样的值（比如350px），则项目将占据固定空间。</span><br><span class="line">flex</span><br><span class="line">    //flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。</span><br><span class="line">align-self</span><br><span class="line">    //align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。</span><br></pre></td></tr></table></figure><h2 id="float"><a href="#float" class="headerlink" title="float"></a>float</h2><pre><code>设置float属性left或right如果元素左或右有空间时元素间会换到一行。清除浮动clear:both|left|right;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+          <category> css </category>
+          
+          <category> css布局 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> css </tag>
+            
+            <tag> 布局 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>React组件通信</title>
       <link href="/2019/09/05/react%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/"/>
       <url>/2019/09/05/react%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/</url>
@@ -13,7 +46,9 @@
       
       <categories>
           
-          <category> 前端 - React </category>
+          <category> 前端 </category>
+          
+          <category> React </category>
           
       </categories>
       
@@ -71,7 +106,11 @@
       
       <categories>
           
-          <category> 搭建博客 - 搭建博客 </category>
+          <category> 搭建博客 </category>
+          
+          <category> 搭建博客 </category>
+          
+          <category> next主题配置 </category>
           
       </categories>
       
@@ -82,9 +121,9 @@
             
             <tag> 备忘 </tag>
             
-            <tag> next </tag>
-            
             <tag> hexo </tag>
+            
+            <tag> next </tag>
             
         </tags>
       
@@ -102,7 +141,11 @@
       
       <categories>
           
-          <category> 搭建博客 - 搭建博客 </category>
+          <category> 搭建博客 </category>
+          
+          <category> 搭建博客 </category>
+          
+          <category> hexo主题配置 </category>
           
       </categories>
       
